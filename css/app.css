@@ -1,0 +1,105 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  
+  position: sticky;
+  left: 0;
+  top: 0;
+  background: #373b39;
+  width: 100%;
+  height: 50px;
+  padding: 0px 50px;
+  transition: all .2s ease;
+}
+
+.header > .logo {
+  float: left;
+  min-width: 200px;
+  height: 50px;
+  font-size: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.header nav {
+  float: right;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.header nav ul li {
+  min-width: 100px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0em .5em;
+  text-align: center;
+}
+
+
+.header nav ul li:hover, .header nav ul li.active {
+  background: #289c60;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 0em .5em;
+}
+
+.header nav i {
+  margin-right: .4em;
+}
+
+.toggle-menu {
+  float: right;
+  min-width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 0px 20px;
+  }
+  .toggle-menu {
+    display: block;
+  }
+  .header nav {
+    background: #373b39;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 50px);
+    transition: all .8s ease;
+  }
+  .header nav ul {
+    display: block;
+  }
+  .header nav ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #000000;
+    margin: 0em;
+  }
+  nav.toggle {
+    left: 0;
+  }
+}
